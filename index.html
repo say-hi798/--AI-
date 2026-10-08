@@ -52,6 +52,9 @@
   .navtabs button:hover{color:var(--vermilion-soft);border-color:var(--vermilion)}
   .navtabs button.active{background:var(--vermilion);color:#fff;border-color:var(--vermilion)}
   .navtabs button.homebtn{font-weight:700}
+  .navtabs a.quizlink{border:1px solid var(--vermilion);background:var(--card);color:var(--vermilion);border-radius:100px;padding:5px 13px;font-size:13px;white-space:nowrap;cursor:pointer;font-family:inherit;font-weight:700;transition:all .16s;flex:0 0 auto}
+  .navtabs a.quizlink:hover{background:var(--vermilion);color:#fff}
+  .quiz-entry{display:inline-block;border:1px solid var(--vermilion);background:var(--vermilion);color:#fff;border-radius:100px;padding:10px 26px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:var(--shadow)}
 
   /* ===== 视图容器 ===== */
   .view{display:none;max-width:1280px;margin:0 auto;padding:34px 20px 60px}
@@ -210,6 +213,8 @@ const META=[
   {id:'ch9', range:'1978—2012', title:'改革开放与中国特色社会主义的开创和发展', lead:'十一届三中全会伟大转折、改革开放历程与社会主义初级阶段理论。'},
   {id:'ch10', range:'2012—至今', title:'中国特色社会主义进入新时代', lead:'全面建成小康社会、习近平新时代中国特色社会主义思想与民族复兴。'}
 ];
+
+const QC={ch1:15,ch2:15,ch3:15,ch4:15,ch5:15,ch6:15,ch7:15,ch8:15,ch9:15,ch10:15};
 
 const DATA={
 ch1:{
@@ -1180,7 +1185,7 @@ function viewHome(){
       <div class="ov-card">
         <div class="t serif"><span class="n">第${'一二三四五六七八九十'[i]}章</span>${m.title}</div>
         <div class="d2">${m.lead}</div>
-        <div class="tags"><span class="tag">${m.range}</span><span class="tag">主观题 ${cnt} 道</span></div>
+        <div class="tags"><span class="tag">${m.range}</span><span class="tag">主观题 ${cnt} 道</span><span class="tag">选择题 ${QC[m.id]||0} 题</span></div>
       </div></div>`;
   }).join('');
   return `
@@ -1191,9 +1196,11 @@ function viewHome(){
     <div class="stats">
       <div class="s"><b>10</b><span>时间线章节</span></div>
       <div class="s"><b>${META.reduce((s,m)=>s+((DATA[m.id]&&DATA[m.id].qa)?DATA[m.id].qa.length:0),0)}</b><span>主观题</span></div>
+      <div class="s"><b>${Object.values(QC).reduce((s,v)=>s+v,0)}</b><span>选择题</span></div>
       <div class="s"><b>3</b><span>高频分级</span></div>
       <div class="s"><b>1840→今</b><span>时间跨度</span></div>
     </div>
+    <div style="margin-top:26px"><a class="quiz-entry" href="quiz.html">进入选择题练习 →</a></div>
   </div>
   <div class="section-title"><span class="bar"></span><h2 class="serif">时间线总览</h2><span class="hint">点击进入对应章节</span></div>
   <div class="ov-rail-wrap">${cards}</div>
@@ -1267,6 +1274,7 @@ function renderNav(hash){
   let h=`<button class="homebtn ${hash==='#/'?'active':''}" onclick="location.hash='#/'">首页</button>`;
   h+=META.map((m,i)=>`<button class="${hash==='#/'+m.id?'active':''}" onclick="location.hash='#/${m.id}'">${i+1}</button>`).join('');
   h+=`<button class="${hash==='#/timeline'?'active':''}" onclick="location.hash='#/timeline'">年表</button>`;
+  h+=`<a class="quizlink" href="quiz.html">做题练习</a>`;
   t.innerHTML=h;
 }
 

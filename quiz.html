@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国近现代史纲要 · 选择题练习</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23B4301E'/%3E%3Cpath d='M16 6l2.2 4.5L23 11l-3.6 3.1.9 4.9L16 17l-4.3 3 .9-4.9L9 11l4.8-.5z' fill='%23F5F1E7'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+:root{--ink:#242019;--ink-soft:#3a352c;--paper:#F6F2E8;--card:#FDFBF4;--vermilion:#B4301E;--vermilion-soft:#7a2a1d;--gold:#B0832F;--gold-soft:#c7a054;--line:#D4CBB4;--line-strong:#BDB29A;--muted:#6E6658;--green:#3f7a4e;--shadow:0 8px 24px rgba(60,50,30,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);line-height:1.75;font-size:18px;background:radial-gradient(1200px 500px at 85% -10%,rgba(176,131,47,.10),transparent 60%),radial-gradient(1000px 500px at 5% 5%,rgba(180,48,30,.06),transparent 60%),var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Noto Serif SC",serif}
+.topbar{position:sticky;top:0;z-index:60;background:rgba(246,242,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 18px}
+.brand{font-weight:900;font-size:17px;white-space:nowrap;display:flex;align-items:center;gap:9px}
+.brand .mk{width:30px;height:30px;border-radius:8px;background:var(--vermilion);color:#fff;display:grid;place-items:center;font-size:15px;flex:0 0 auto}
+.navtabs{display:flex;gap:5px;overflow-x:auto;flex:1;scrollbar-width:none;padding:2px 0;min-width:0}
+.navtabs::-webkit-scrollbar{display:none}
+.navtabs button{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:100px;padding:5px 10px;font-size:13px;white-space:nowrap;cursor:pointer;font-family:inherit;transition:all .16s;flex:0 0 auto}
+.navtabs button:hover{color:var(--vermilion-soft);border-color:var(--vermilion)}
+.navtabs button.active{background:var(--vermilion);color:#fff;border-color:var(--vermilion)}
+.backbtn{flex:0 0 auto;border:1px solid var(--vermilion);background:var(--card);color:var(--vermilion);border-radius:100px;padding:6px 15px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .16s}
+.backbtn:hover{background:var(--vermilion);color:#fff}
+.wrap{max-width:880px;margin:0 auto;padding:34px 20px 60px}
+.hero{text-align:center;padding:10px 0 24px}
+.hero h1{font-size:clamp(26px,4vw,38px);font-weight:900;letter-spacing:.03em}
+.hero p{color:var(--muted);margin-top:8px;font-size:15px}
+.hud{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:18px 0 12px;font-size:15px;color:var(--muted)}
+.hud b{color:var(--vermilion);font-weight:900;font-size:18px}
+.hud .right{color:var(--green);font-weight:700}
+.hud .wrong{color:var(--vermilion);font-weight:700}
+.bar{height:8px;background:#e6dfcf;border-radius:100px;overflow:hidden;margin-bottom:20px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--vermilion),#d2695a);border-radius:100px;transition:width .3s}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;box-shadow:var(--shadow)}
+.qmeta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.qmeta .tag{font-size:12.5px;border:1px solid var(--line);border-radius:100px;padding:2px 10px;color:var(--muted);background:#fffdf8}
+.qnum{font-family:"Noto Serif SC",serif;font-size:14px;font-weight:700;color:var(--vermilion-soft)}
+.qt{font-size:19px;font-weight:700;line-height:1.6;margin-bottom:20px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:11px 16px}
+.opt{display:flex;align-items:flex-start;gap:11px;border:1px solid var(--line);border-radius:11px;padding:13px 16px;cursor:pointer;background:#fffdf8;font-size:16px;line-height:1.55;transition:all .15s;user-select:none}
+.opt:hover{border-color:var(--vermilion);background:#faf5ec}
+.opt .lt{flex:0 0 auto;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line-strong);display:grid;place-items:center;font-size:14px;font-weight:700;color:var(--muted);font-family:"Noto Serif SC",serif}
+.opt.correct{border-color:var(--green);background:rgba(63,122,78,.10)}
+.opt.correct .lt{background:var(--green);border-color:var(--green);color:#fff}
+.opt.wrong{border-color:var(--vermilion);background:rgba(180,48,30,.10)}
+.opt.wrong .lt{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
+.opt.locked{cursor:default}
+.fb{display:none;margin-top:18px;border-radius:10px;padding:13px 16px;font-size:15.5px;line-height:1.6}
+.fb.show{display:block}
+.fb.ok{background:rgba(63,122,78,.12);border:1px solid #cfe0c9;color:#2f5538}
+.fb.no{background:rgba(180,48,30,.10);border:1px solid #e6c0b8;color:#7a2a1d}
+.fb b{font-weight:700}
+.acts{margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn{border:1px solid var(--vermilion);background:var(--vermilion);color:#fff;border-radius:100px;padding:10px 26px;font-size:15.5px;cursor:pointer;font-family:inherit;font-weight:700}
+.btn.ghost{background:var(--card);color:var(--vermilion)}
+.done{text-align:center;padding:30px 10px}
+.done .score{font-family:"Noto Serif SC",serif;font-weight:900;color:var(--vermilion);font-size:clamp(34px,6vw,54px)}
+.done .sub{color:var(--muted);font-size:16px;margin-top:6px}
+.done .rate{display:inline-block;margin-top:16px;font-size:15px;border:1px solid var(--line);border-radius:100px;padding:5px 18px;color:var(--vermilion-soft);background:#fffdf8}
+@media (max-width:640px){.opts{grid-template-columns:1fr}.qcard{padding:20px 18px}.wrap{padding:24px 13px 50px}}
+</style>
+</head>
+<body>
+<nav class="topbar"><div class="inner">
+<a class="brand" href="index.html"><span class="mk serif">史</span><span class="btxt">近现代史纲要</span></a>
+<div class="navtabs" id="chTabs"></div>
+<a class="backbtn" href="index.html">← 返回主页</a>
+</div></nav>
+<main class="wrap">
+<div class="hero"><h1 class="serif">选择题练习</h1><p>题目顺序已随机打乱 · 逐题作答 · 提交后即时显示正确答案</p></div>
+<div id="stage"></div>
+</main>
+<script>
+const CHNAMES={all:'全部章节',ch1:'第一章',ch2:'第二章',ch3:'第三章',ch4:'第四章',ch5:'第五章',ch6:'第六章',ch7:'第七章',ch8:'第八章',ch9:'第九章',ch10:'第十章'};
+const QUIZ={
+ch1:[
+
+  {q:'中国近代史上，中国人民第一次大规模的反侵略武装斗争是？',opts:['三元里人民起义','太平天国运动','义和团运动','台湾人民抗日斗争'],ans:0},
+  {q:'掌握中国海关大权长达 40 余年之久的外国人是？',opts:['李提摩太','赫德','义律','华尔'],ans:1},
+  {q:'被称为近代中国“睁眼看世界的第一人”的是？',opts:['魏源','林则徐','严复','龚自珍'],ans:1},
+  {q:'魏源在《海国图志》中提出的著名思想是？',opts:['救亡图存','师夷长技以制夷','物竞天择，适者生存','振兴中华'],ans:1},
+  {q:'近代中国社会最主要的矛盾是？',opts:['封建主义与人民大众的矛盾','帝国主义与中华民族的矛盾','资产阶级与无产阶级的矛盾','地主阶级与农民阶级的矛盾'],ans:1},
+  {q:'中国近代史上第一个不平等条约《南京条约》签订于？',opts:['1840 年','1842 年','1856 年','1860 年'],ans:1},
+  {q:'严复翻译的、宣传“物竞天择，适者生存”思想的著作是？',opts:['《海国图志》','《四洲志》','《天演论》','《救亡决论》'],ans:2},
+{q:'清朝前期，康熙、雍正、乾隆三朝史称？',opts:['康雍乾盛世','文景之治','贞观之治','开元盛世'],ans:0},
+{q:'中国开始进入半殖民地半封建社会是在？',opts:['第二次鸦片战争后','甲午战争后','第一次鸦片战争后','八国联军侵华后'],ans:2},
+{q:'列强对中国的侵略，首先和主要是？',opts:['经济侵略','军事侵略','文化渗透','政治控制'],ans:1},
+{q:'基督教在中国设立的最大的出版机构是？',opts:['广学会','强学会','兴中会','同盟会'],ans:0},
+{q:'外国列强对中国的资本输出最早出现在？',opts:['第一次鸦片战争之后','第二次鸦片战争之后','甲午战争之后','八国联军侵华之后'],ans:1},
+{q:'近代中国反侵略斗争失败的根本原因是？',opts:['经济技术落后','社会制度腐败','军事实力悬殊','缺乏统一领导'],ans:1},
+{q:'提出对华“门户开放”政策的国家是？',opts:['英国','日本','美国','法国'],ans:2},
+{q:'近代中华民族面临的两大历史任务中，必须首先完成的是？',opts:['实现国家繁荣富强','求得民族独立和人民解放','实现人民共同富裕','建立民主共和国'],ans:1}
+ ],
+ch2:[
+
+  {q:'太平天国农民战争爆发的标志是 1851 年的？',opts:['金田起义','永安建制','定都天京','天京事变'],ans:0},
+  {q:'太平天国颁布的、以解决土地问题为中心的纲领性文件是？',opts:['《资政新篇》','《天朝田亩制度》','《劝世良言》','《原道觉世训》'],ans:1},
+  {q:'《资政新篇》的作者是？',opts:['洪秀全','杨秀清','洪仁玕','石达开'],ans:2},
+  {q:'太平天国由盛而衰的转折点是？',opts:['永安建制','北伐失利','天京事变','安庆陷落'],ans:2},
+  {q:'洋务运动的指导思想是？',opts:['中学为体，西学为用','师夷长技以制夷','变法维新','自强求富'],ans:0},
+  {q:'洋务派创办的第一个可称之为近代军事工业的兵工厂是？',opts:['福州船政局','江南制造总局','天津机器局','安庆内军械所'],ans:1},
+  {q:'维新派同守旧派的论战，被称为资产阶级思想与封建主义思想在中国的？',opts:['第一次正面交锋','最后一次较量','间接接触','全面合流'],ans:0},
+{q:'太平天国定都天京是在？',opts:['1851 年','1853 年','1856 年','1864 年'],ans:1},
+{q:'太平天国农民战争最终失败于？',opts:['1856 年','1860 年','1864 年','1868 年'],ans:2},
+{q:'洋务派的首领、以“自强”“求富”为目标的是？',opts:['曾国藩','李鸿章','奕䜣','左宗棠'],ans:2},
+{q:'综理洋务的中央机关是？',opts:['外务部','军机处','总理各国事务衙门','总理府'],ans:2},
+{q:'清政府筹建的海军主力是？',opts:['南洋水师','北洋水师','福建水师','广东水师'],ans:1},
+{q:'洋务运动时期最早建立的新式学堂（翻译学堂）是？',opts:['京师大学堂','福州船政学堂','天津武备学堂','京师同文馆'],ans:3},
+{q:'康有为发起的、拉开维新运动序幕的事件是？',opts:['公车上书','戊戌政变','百日维新','强学会成立'],ans:0},
+{q:'戊戌维新运动失败后，被保留下来的新政措施是？',opts:['设议院','废八股','实行君主立宪','京师大学堂和各地新式学堂'],ans:3}
+ ],
+ch3:[
+
+  {q:'1894 年孙中山在檀香山组织的中国第一个资产阶级革命组织是？',opts:['华兴会','兴中会','光复会','同盟会'],ans:1},
+  {q:'中国第一个全国性的资产阶级革命政党是 1905 年成立的？',opts:['国民党','中华革命党','中国同盟会','强学会'],ans:2},
+  {q:'中国同盟会的机关报是？',opts:['《新民丛报》','《民报》','《苏报》','《时务报》'],ans:1},
+  {q:'中国历史上第一部具有资产阶级共和国宪法性质的法典是？',opts:['《中华民国约法》','《钦定宪法大纲》','《中华民国临时约法》','《宪法重大信条十九条》'],ans:2},
+  {q:'1911 年广州黄花岗起义的主要领导人是？',opts:['孙中山','宋教仁','黄兴','章炳麟'],ans:2},
+  {q:'武昌起义后，新成立的湖北军政府都督是？',opts:['黄兴','黎元洪','蒋翊武','孙武'],ans:1},
+  {q:'辛亥革命时期，保路运动中斗争最为激烈的省份是？',opts:['湖北','湖南','广东','四川'],ans:3},
+{q:'1904—1905 年，为争夺在华利益而在中国东北进行的战争是？',opts:['甲午战争','中法战争','日俄战争','八国联军侵华'],ans:2},
+{q:'章炳麟（章太炎）撰写的宣传革命的文章是？',opts:['《革命军》','《驳康有为论革命书》','《警世钟》','《猛回头》'],ans:1},
+{q:'邹容宣传民主革命思想的著作是？',opts:['《驳康有为论革命书》','《革命军》','《警世钟》','《猛回头》'],ans:1},
+{q:'孙中山三民主义中，“平均地权”属于？',opts:['民族主义','民权主义','民生主义','民主主义'],ans:2},
+{q:'1913 年反对袁世凯的“二次革命”，又称？',opts:['赣宁之役','护国运动','护法运动','武昌起义'],ans:0},
+{q:'护国运动中，首先宣布云南独立的将领是？',opts:['黄兴','冯玉祥','李烈钧','蔡锷'],ans:3},
+{q:'辛亥革命最突出的历史功绩是？',opts:['结束了两千多年的封建君主专制制度','建立了社会主义制度','完成了反帝反封建任务','实现了国家统一'],ans:0},
+{q:'旧民主主义革命终结的标志是？',opts:['二次革命失败','护国运动失败','武昌起义失败','第二次护法运动失败'],ans:3}
+ ],
+ch4:[
+
+  {q:'新文化运动兴起的标志是 1915 年陈独秀创办？',opts:['《青年杂志》（后改名《新青年》）','《每周评论》','《新潮》','《湘江评论》'],ans:0},
+  {q:'中国现代文学史上第一篇白话文小说是鲁迅的？',opts:['《阿Q正传》','《孔乙己》','《狂人日记》','《药》'],ans:2},
+  {q:'十月革命后，率先在中国举起马克思主义旗帜的是？',opts:['陈独秀','李大钊','毛泽东','李达'],ans:1},
+  {q:'中国共产党第一次全国代表大会召开于？',opts:['1919 年','1920 年','1921 年','1922 年'],ans:2},
+  {q:'第一个把《共产党宣言》翻译成中文全译本的是？',opts:['陈望道','李大钊','瞿秋白','李汉俊'],ans:0},
+  {q:'五四运动爆发的直接导火线是？',opts:['俄国十月革命','巴黎和会上中国外交失败','新文化运动','“二十一条”签订'],ans:1},
+  {q:'中国第一个农民协会成立于？',opts:['湖南湘潭','浙江萧山县衙前村','广东海丰','江西瑞金'],ans:1},
+{q:'新文化运动倡导的两面旗帜是？',opts:['民主与科学','自由与平等','革命与改良','独立与富强'],ans:0},
+{q:'1919 年，李大钊系统介绍马克思主义的文章是？',opts:['《布尔什维主义的胜利》','《庶民的胜利》','《我的马克思主义观》','《谈政治》'],ans:2},
+{q:'五四运动后期，运动的主力转变为？',opts:['学生','工人','农民','商人'],ans:1},
+{q:'中国共产党最早的组织（上海共产主义小组）的书记是？',opts:['李大钊','张国焘','毛泽东','陈独秀'],ans:3},
+{q:'第一次国共合作正式形成的标志是？',opts:['中共二大','国民党一大','中共三大','五卅运动'],ans:1},
+{q:'中共二大第一次明确提出？',opts:['土地革命纲领','反帝反封建的民主革命纲领','抗日民族统一战线','社会主义总路线'],ans:1},
+{q:'第一次工人运动高潮的起点是？',opts:['香港海员罢工','京汉铁路工人罢工','省港大罢工','安源路矿工人罢工'],ans:0},
+{q:'1926 年 3 月，蒋介石制造了？',opts:['四一二政变','整理党务案','中山舰事件','七一五政变'],ans:2}
+ ],
+ch5:[
+
+  {q:'打响武装反抗国民党反动统治第一枪的是？',opts:['秋收起义','南昌起义','广州起义','百色起义'],ans:1},
+  {q:'八七会议确定的总方针是？',opts:['土地革命和武装斗争','城市中心暴动','建立统一战线','北上抗日'],ans:0},
+  {q:'“须知政权是由枪杆子中取得的”这一论断的提出者是？',opts:['周恩来','瞿秋白','毛泽东','朱德'],ans:2},
+  {q:'中国共产党历史上第一个土地法是？',opts:['《兴国土地法》','《井冈山土地法》','《中国土地法大纲》','《五四指示》'],ans:1},
+  {q:'中国共产党历史上一个生死攸关的转折点、长征途中召开的会议是？',opts:['八七会议','遵义会议','瓦窑堡会议','洛川会议'],ans:1},
+  {q:'1928 年在东北宣布“服从国民政府、改易旗帜”的是？',opts:['张作霖','张学良','杨虎城','冯玉祥'],ans:1},
+  {q:'三湾改编确立的重要建军原则是？',opts:['官兵平等','把党的支部建在连上','军事主官负责制','政治委员制'],ans:1},
+{q:'秋收起义公开打出的旗帜是？',opts:['工农革命军','国民革命军','红军','解放军'],ans:0},
+{q:'毛泽东提出“以乡村为中心”思想的著作是？',opts:['《井冈山的斗争》','《星星之火，可以燎原》','《反对本本主义》','《中国红色政权为什么能够存在》'],ans:1},
+{q:'将“没收一切土地”改为“没收一切公共土地及地主阶级的土地”的法令是？',opts:['《兴国土地法》','《井冈山土地法》','《中国土地法大纲》','《五四指示》'],ans:0},
+{q:'1931 年 1 月至 1935 年 1 月，党内“左”倾教条主义错误的代表是？',opts:['瞿秋白','李立三','博古','王明'],ans:3},
+{q:'第五次反“围剿”失败后，开始长征战略转移的是？',opts:['红二方面军','红四方面军','红一方面军','红二十五军'],ans:2},
+{q:'1936 年 10 月，红军三大主力会师的地点是？',opts:['陕北吴起镇','贵州遵义','甘肃会宁、静宁将台堡','四川懋功'],ans:2},
+{q:'“中国国民党临时行动委员会”（第三党）的领导人是？',opts:['邓演达','梁漱溟','黄炎培','张君劢'],ans:0},
+{q:'1928 年 10 月，国民党通过并废除议会制度的文件是？',opts:['《训政纲领》','《五权宪法》','《中华民国临时约法》','《中华民国宪法》'],ans:0}
+ ],
+ch6:[
+
+  {q:'中国人民抗日战争的起点是 1931 年的？',opts:['七七事变','九一八事变','一·二八事变','华北事变'],ans:1},
+  {q:'标志着日本发动全面侵华战争、中国进入全民族抗战的是 1937 年的？',opts:['卢沟桥事变','九一八事变','西安事变','八一三事变'],ans:0},
+  {q:'1937 年洛川会议通过的重要文件是？',opts:['《抗日救国十大纲领》','《论持久战》','《新民主主义论》','《论联合政府》'],ans:0},
+  {q:'全国性抗战开始后中国军队取得的第一次重大胜利是？',opts:['台儿庄战役','平型关大捷','百团大战','淞沪会战'],ans:1},
+  {q:'延安整风运动最主要的任务是？',opts:['反对宗派主义整顿党风','反对主观主义整顿学风','反对党八股整顿文风','反对官僚主义'],ans:1},
+  {q:'1945 年出席联合国制宪会议（旧金山会议）的中国解放区代表是？',opts:['周恩来','董必武','林伯渠','王若飞'],ans:1},
+  {q:'八路军在 1940 年 8—12 月发动的、沉重打击日军的大规模战役是？',opts:['平型关战役','百团大战','忻口会战','黄桥战役'],ans:1},
+{q:'1935 年，日本制造的侵略华北的事件是？',opts:['华北事变','九一八事变','一·二八事变','七七事变'],ans:0},
+{q:'1932 年，日本策划建立的傀儡政权是？',opts:['汪伪政权','伪满洲国','华北自治政府','蒙疆政府'],ans:1},
+{q:'1940 年 3 月在南京成立的伪“中华民国国民政府”的是？',opts:['溥仪','汪精卫','陈公博','周佛海'],ans:1},
+{q:'标志中国人民抗日救亡运动新高潮到来的运动是？',opts:['五四运动','五卅运动','一二·九运动','新文化运动'],ans:2},
+{q:'1938 年，李宗仁指挥的正面战场重大胜利是？',opts:['台儿庄战役','淞沪会战','忻口会战','长沙会战'],ans:0},
+{q:'1940 年 5 月，在枣宜会战中殉国的国民党将领是？',opts:['佟麟阁','赵登禹','戴安澜','张自忠'],ans:3},
+{q:'抗日战争进入战略相持阶段的标志是？',opts:['1937 年卢沟桥事变','1938 年 10 月广州、武汉失守','1941 年太平洋战争爆发','1943 年开罗会议'],ans:1},
+{q:'中国共产党巩固和扩大抗日民族统一战线的策略总方针是？',opts:['发展进步势力，争取中间势力，孤立顽固势力','团结—批评—团结','一切服从统一战线','三三制原则'],ans:0}
+ ],
+ch7:[
+
+  {q:'1946 年 6 月，全国性内战爆发的标志是国民党军进攻？',opts:['山东解放区','陕甘宁解放区','中原解放区','华北解放区'],ans:2},
+  {q:'1947 年揭开人民解放军战略进攻序幕的是？',opts:['辽沈战役','刘邓大军千里跃进大别山','渡江战役','济南战役'],ans:1},
+  {q:'1947 年全国土地会议制定通过的文件是？',opts:['《五四指示》','《中国土地法大纲》','《井冈山土地法》','《兴国土地法》'],ans:1},
+  {q:'中共七届二中全会上，毛泽东提出的著名思想是？',opts:['“两个务必”','实事求是','批评与自我批评','群众路线'],ans:0},
+  {q:'1945 年重庆谈判后，国共双方签署的协定是？',opts:['《政府与中共代表会谈纪要》（双十协定）','停战协定','国内和平协定','共同纲领'],ans:0},
+  {q:'1947 年“五二〇”运动提出的口号是？',opts:['外争主权，内除国贼','反饥饿、反内战、反迫害','停止内战，一致抗日','打倒蒋介石，解放全中国'],ans:1},
+  {q:'下列战役中，不属于三大战役的是？',opts:['辽沈战役','淮海战役','平津战役','渡江战役'],ans:3},
+{q:'1945 年，中共中央《对目前时局的宣言》提出的口号是？',opts:['和平、民主、团结','团结、紧张、严肃','独立、自由、民主','抗战、建国、统一'],ans:0},
+{q:'1946 年，将减租减息政策改为实现“耕者有其田”的文件是？',opts:['《中国土地法大纲》','《井冈山土地法》','《五四指示》','《兴国土地法》'],ans:2},
+{q:'辽沈战役的时间是？',opts:['1948.11.6—1949.1.10','1948.11.29—1949.1.31','1948.9.12—11.2','1949.4.21—4.23'],ans:2},
+{q:'1947 年，被国民党宣布为“非法团体”而被迫解散的民主党派是？',opts:['中国民主同盟','中国国民党革命委员会','中国民主建国会','九三学社'],ans:0},
+{q:'1948 年 1 月在香港成立的“中国国民党革命委员会”的名誉主席是？',opts:['李济深','何香凝','张澜','宋庆龄'],ans:3},
+{q:'中共七届二中全会在哪里召开？',opts:['延安','北平','重庆','西柏坡'],ans:3},
+{q:'中国新民主主义革命胜利的三大法宝是？',opts:['统一战线、武装斗争、党的建设','土地革命、武装斗争、根据地建设','党的领导、人民军队、统一战线','实事求是、群众路线、独立自主'],ans:0},
+{q:'1947 年台湾爆发的反抗国民党统治的起义是？',opts:['二二八起义','五二〇运动','一二·一运动','下关惨案'],ans:0}
+ ],
+ch8:[
+
+  {q:'中国大陆基本解放和实现统一的标志是 1951 年？',opts:['新中国成立','西藏和平解放','海南岛解放','新疆和平解放'],ans:1},
+  {q:'第一个五年计划建设的中心环节是优先发展？',opts:['农业','轻工业','重工业','商业'],ans:2},
+  {q:'中国第一颗原子弹爆炸成功于？',opts:['1960 年','1964 年','1967 年','1970 年'],ans:1},
+  {q:'中国第一颗人造地球卫星“东方红一号”发射成功于？',opts:['1964 年','1967 年','1970 年','1971 年'],ans:2},
+  {q:'中华人民共和国恢复在联合国合法席位是在？',opts:['1969 年','1970 年','1971 年','1972 年'],ans:2},
+  {q:'被视为开始探索中国自己的社会主义建设道路标志的著作是？',opts:['《论十大关系》','《关于正确处理人民内部矛盾的问题》','《论人民民主专政》','《新民主主义论》'],ans:0},
+  {q:'对资本主义工商业进行社会主义改造中，企业利润分配采取的形式是？',opts:['统购包销','四马分肥','加工订货','定息'],ans:1},
+{q:'中华人民共和国成立，标志着？',opts:['新民主主义革命取得基本胜利','社会主义制度建立','过渡时期结束','文化大革命开始'],ans:0},
+{q:'新民主主义社会的国营经济主要通过什么建立？',opts:['没收民族资本','没收官僚资本','赎买外国资本','合作化运动'],ans:1},
+{q:'1953 年提出的过渡时期总路线被概括为？',opts:['一化三改','两个务必','四个现代化','三大改造'],ans:0},
+{q:'农业社会主义改造中，具有半社会主义性质的组织形式是？',opts:['互助组','人民公社','高级农业生产合作社','初级农业生产合作社'],ans:3},
+{q:'中国第一颗氢弹爆炸成功是在？',opts:['1964 年','1967 年','1970 年','1971 年'],ans:1},
+{q:'1956 年中共八大指出，国内主要矛盾是？',opts:['无产阶级与资产阶级的矛盾','人民对建立先进工业国的要求同落后农业国现实之间的矛盾','生产力与生产关系的矛盾','先进社会制度与落后生产力之间的矛盾'],ans:1},
+{q:'提出“百花齐放、百家争鸣”和“长期共存、互相监督”方针的是？',opts:['《关于正确处理人民内部矛盾的问题》','中共八大报告','《论十大关系》','《论人民民主专政》'],ans:2},
+{q:'第一个同新中国建立外交关系的国家是？',opts:['美国','朝鲜','印度','苏联'],ans:3}
+ ],
+ch9:[
+
+  {q:'1978 年 5 月《光明日报》发表的、引发真理标准大讨论的文章是？',opts:['《实践是检验真理的唯一标准》','《解放思想，实事求是》','《关于建国以来党的若干历史问题的决议》','《告台湾同胞书》'],ans:0},
+  {q:'新中国成立以来党的历史上具有深远意义伟大转折的会议是？',opts:['中共十一大','中共十一届三中全会','中共十一届六中全会','中共十二大'],ans:1},
+  {q:'“第二个历史决议”《关于建国以来党的若干历史问题的决议》通过于？',opts:['十一届三中全会','十一届六中全会','十二届三中全会','中共十三大'],ans:1},
+  {q:'中华人民共和国对香港恢复行使主权是在？',opts:['1997 年 7 月 1 日','1999 年 12 月 20 日','1992 年','2001 年'],ans:0},
+  {q:'中华人民共和国对澳门恢复行使主权是在？',opts:['1997 年','1999 年 12 月 20 日','2000 年','2001 年'],ans:1},
+  {q:'系统阐述社会主义初级阶段理论、概括“一个中心、两个基本点”基本路线的会议是？',opts:['中共十二大','中共十三大','中共十四大','中共十五大'],ans:1},
+  {q:'中国正式加入世界贸易组织（WTO）是在？',opts:['1999 年','2000 年','2001 年','2008 年'],ans:2},
+{q:'1979 年，邓小平在理论工作务虚会上明确提出必须坚持？',opts:['改革开放','四项基本原则','社会主义市场经济','一国两制'],ans:1},
+{q:'党在社会主义初级阶段基本路线的核心内容被概括为？',opts:['两手抓，两手都要硬','一个中心、两个基本点','三个代表','四个现代化'],ans:1},
+{q:'1992 年邓小平南方谈话提出的“三个有利于”标准不包括？',opts:['是否有利于发展社会主义社会的生产力','是否有利于增强社会主义国家的综合国力','是否有利于提高人民的生活水平','是否有利于扩大对外开放的规模'],ans:3},
+{q:'1993 年在新加坡举行的两岸会谈是？',opts:['九二会谈','汪辜会谈','马习会','两会商谈'],ans:1},
+{q:'中共十四大明确经济体制改革的目标是？',opts:['建立社会主义市场经济体制','计划经济为主','建立现代企业制度','全面私有化'],ans:0},
+{q:'首次将邓小平理论确立为党的指导思想并写入党章的是？',opts:['中共十六大','中共十四大','中共十三大','中共十五大'],ans:3},
+{q:'1988 年设立的我国最大的经济特区是？',opts:['海南经济特区','深圳经济特区','厦门经济特区','浦东新区'],ans:0},
+{q:'邓小平关于社会主义本质的论断不包括？',opts:['解放生产力，发展生产力','消灭剥削，消除两极分化','最终达到共同富裕','建立市场经济体制'],ans:3}
+ ],
+ch10:[
+
+  {q:'提出到 2020 年全面建成小康社会奋斗目标的会议是？',opts:['中共十七大','中共十八大','中共十九大','中共二十大'],ans:1},
+  {q:'作出“我国社会主要矛盾已经转化”这一重大政治论断的会议是？',opts:['中共十八大','中共十九大','中共十九届六中全会','中共二十大'],ans:1},
+  {q:'南京大屠杀死难者国家公祭日是每年的？',opts:['9 月 3 日','9 月 18 日','12 月 13 日','9 月 30 日'],ans:2},
+  {q:'通过《关于全面深化改革若干重大问题的决定》的会议是？',opts:['十八届三中全会','十八届四中全会','中共十九大','十九届四中全会'],ans:0},
+  {q:'中国特色社会主义事业“五位一体”总体布局不包括？',opts:['经济建设','政治建设','生态文明建设','党的建设'],ans:3},
+  {q:'《中华人民共和国国歌法》通过于？',opts:['2004 年','2012 年','2017 年','2020 年'],ans:2},
+{q:'中国人民抗日战争胜利纪念日是每年的？',opts:['9 月 3 日','9 月 18 日','12 月 13 日','10 月 1 日'],ans:0},
+{q:'通过《关于全面推进依法治国若干重大问题的决定》的会议是？',opts:['十八届三中全会','十八届四中全会','十八届五中全会','十八届六中全会'],ans:1},
+{q:'中共十九大确立的党的行动指南是？',opts:['习近平新时代中国特色社会主义思想','邓小平理论','三个代表重要思想','科学发展观'],ans:0},
+{q:'根据中共十九大部署，到 2035 年的目标是？',opts:['全面建成小康社会','基本实现社会主义现代化','建成社会主义现代化强国','实现共同富裕'],ans:1},
+{q:'2005 年通过的、维护国家主权和领土完整的法律是？',opts:['《国家安全法》','《国歌法》','《香港基本法》','《反分裂国家法》'],ans:3},
+{q:'2013 年，中国提出的重大国际合作倡议是？',opts:['亚太自贸区','上海合作组织','一带一路','金砖合作'],ans:2},
+{q:'中共十八届五中全会提出的新发展理念是？',opts:['改革、发展、稳定、和谐','富强、民主、文明、和谐','五位一体','创新、协调、绿色、开放、共享'],ans:3},
+{q:'“四个全面”战略布局不包括？',opts:['全面建成小康社会','全面深化改革','全面依法治国','全面对外开放'],ans:3},
+{q:'实现中华民族伟大复兴，是近代以来？',opts:['唯一的选择','必然的趋势','时代的主题','最伟大的梦想'],ans:3}
+ ]
+};
+let cur='all',order=[],idx=0,right=0,wrong=0,picked=false;
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function start(){const pool=cur==='all'?Object.values(QUIZ).flat():QUIZ[cur];order=shuffle(pool.slice());idx=0;right=0;wrong=0;picked=false;render();}
+function renderTabs(){const t=document.getElementById('chTabs');let h='';for(const k in CHNAMES){const c=k==='all'?Object.values(QUIZ).flat().length:QUIZ[k].length;h+=`<button class="${k===cur?'active':''}" onclick="setCh('${k}')">${CHNAMES[k]} ${c}</button>`;}t.innerHTML=h;}
+function setCh(k){cur=k;renderTabs();start();}
+function render(){
+  const stage=document.getElementById('stage');
+  if(idx>=order.length){stage.innerHTML=renderDone();return;}
+  const it=order[idx];
+  const opts=it.opts.map((o,oi)=>`<div class="opt" onclick="pick(${oi})"><span class="lt">${'ABCD'[oi]}</span><span>${o}</span></div>`).join('');
+  stage.innerHTML=`
+    <div class="hud"><span>第 <b>${idx+1}</b> / ${order.length} 题 · ${CHNAMES[cur]}</span><span>答对 <b class="right" id="cR">${right}</b> · 答错 <b class="wrong" id="cW">${wrong}</b></span></div>
+    <div class="bar"><i style="width:${(idx/order.length*100).toFixed(1)}%"></i></div>
+    <div class="qcard">
+      <div class="qmeta"><span class="qnum">第 ${idx+1} 题</span><span class="tag">${CHNAMES[cur]}</span></div>
+      <div class="qt serif">${it.q}</div>
+      <div class="opts" id="opts">${opts}</div>
+      <div class="fb" id="fb"></div>
+      <div class="acts" id="acts"></div>
+    </div>`;
+}
+function pick(oi){
+  if(picked)return;picked=true;
+  const it=order[idx];const ok=oi===it.ans;
+  if(ok)right++;else wrong++;
+  const ops=document.querySelectorAll('#opts .opt');
+  ops.forEach((o,j)=>{o.classList.add('locked');if(j===it.ans)o.classList.add('correct');else if(j===oi)o.classList.add('wrong');});
+  const cr=document.getElementById('cR'),cw=document.getElementById('cW');
+  if(cr)cr.textContent=right;if(cw)cw.textContent=wrong;
+  const fb=document.getElementById('fb');
+  fb.className='fb show '+(ok?'ok':'no');
+  fb.innerHTML=(ok?'<b>回答正确！</b>':'<b>回答错误</b>')+`　正确答案：<b>${'ABCD'[it.ans]}</b>　${it.opts[it.ans]}`;
+  const acts=document.getElementById('acts');
+  const last=idx===order.length-1;
+  acts.innerHTML=`<button class="btn" onclick="next()">${last?'查看成绩':'下一题'}${last?'':' →'}</button>`;
+}
+function next(){idx++;picked=false;render();}
+function renderDone(){
+  const total=order.length;const rate=total?Math.round(right/total*100):0;
+  return `<div class="done">
+    <div class="score">${right} / ${total}</div>
+    <div class="sub">共作答 ${total} 题 · 答对 ${right} 题 · 答错 ${wrong} 题</div>
+    <div class="rate">正确率 ${rate}%</div>
+    <div style="margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <button class="btn" onclick="start()">再练一组（重新打乱）</button>
+      <a class="btn ghost" href="index.html">返回主页</a>
+    </div></div>`;
+}
+renderTabs();start();
+</script>
+</body>
+</html>
